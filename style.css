@@ -18,5 +18,18 @@
     border: 2px solid #ccc;
     box-shadow: 4px 4px 2px #000;
     z-index: 1;
+    animation: aparecer 1s ease 1 forwards;
 }
+
+@keyframes aparecer {
+    from {
+        left: 10px;
+        opacity: 0;
+    }
+    to {
+        left: 100px;
+        opacity: 1;
+    }
+}
+
 
