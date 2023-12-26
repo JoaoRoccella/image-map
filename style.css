@@ -29,6 +29,7 @@ img {
     background-color: #0008;
     z-index: 1;
     width: 100%;
+    animation: overlay .3s ease-out 1 forwards;
 }
 
 .data {
@@ -56,7 +57,7 @@ area {
 
 #retrovisor-dir {
     top: 30%;
-    left: calc(50% - 100px);
+    left: 80px;
 }
 
 .close {
@@ -82,3 +83,14 @@ area {
         opacity: 1;
     }
 }
+
+@keyframes overlay {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
