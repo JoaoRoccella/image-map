@@ -7,6 +7,10 @@
     scroll-behavior: smooth;
 }
 
+img {
+    width: 100%;
+}
+
 .oculto {
     display: none;
 }
@@ -35,8 +39,8 @@ area {
 }
 
 #retrovisor-dir {
-    top: 110px;
-    left: 700px;
+    top: 50%;
+    left: calc(50% - 100px);
 }
 
 .close {

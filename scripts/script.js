@@ -3,8 +3,6 @@ document.addEventListener('click', e => {
 
     if (e.target.localName === 'area') {
 
-        console.log(e.target.getAttribute('data-target'));
-
         document.querySelectorAll('div.data').forEach(dataDiv => {
             dataDiv.classList.add('oculto');
         });
