@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.oculto {
+    display: none;
+}
+
+.data {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 200px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #ccc;
+    box-shadow: 4px 4px 2px #000;
+    z-index: 1;
+}
+
