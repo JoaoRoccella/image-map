@@ -15,6 +15,15 @@ img {
     display: none;
 }
 
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #0008;
+    z-index: 1;
+    width: 100%;
+}
+
 .data {
     position: absolute;
     width: 200px;
@@ -25,7 +34,7 @@ img {
     box-shadow: 10px 10px 40px -10px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: 10px 10px 40px -10px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 10px 10px 40px -10px rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    z-index: 2;
     animation: aparecer .3s ease-out 1 forwards;
 }
 
@@ -34,12 +43,12 @@ area {
 }
 
 #parabrisa {
-    top: 50px;
+    top: 30%;
     left: 80px;
 }
 
 #retrovisor-dir {
-    top: 50%;
+    top: 30%;
     left: calc(50% - 100px);
 }
 
