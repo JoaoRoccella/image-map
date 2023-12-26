@@ -3,13 +3,16 @@
     padding: 0;
 }
 
+:root {
+    scroll-behavior: smooth;
+}
+
 .oculto {
     display: none;
 }
 
 .data {
     position: absolute;
-    top: 50px;
     width: 200px;
     background-color: #fff;
     padding: 20px;
@@ -20,6 +23,20 @@
     -moz-box-shadow: 10px 10px 40px -10px rgba(0, 0, 0, 0.5);
     z-index: 1;
     animation: aparecer .3s ease-out 1 forwards;
+}
+
+area {
+    cursor: pointer;
+}
+
+#parabrisa {
+    top: 50px;
+    left: 80px;
+}
+
+#retrovisor-dir {
+    top: 110px;
+    left: 700px;
 }
 
 .close {
@@ -36,12 +53,12 @@
 
 @keyframes aparecer {
     from {
-        left: 10px;
+        margin-left: -50px;
         opacity: 0;
     }
 
     to {
-        left: 80px;
+        margin-left: 0;
         opacity: 1;
     }
 }

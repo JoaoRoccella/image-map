@@ -1,6 +1,17 @@
-document.querySelector('#area-parabrisa').addEventListener('click', () => {
-    document.querySelector('#parabrisa').classList.remove('oculto');
-    document.querySelector('#parabrisa').classList.add('data');
+document.addEventListener('click', e => {
+
+    if (e.target.localName === 'area') {
+
+        console.log(e.target.getAttribute('data-target'));
+
+        document.querySelectorAll('div.data').forEach(dataDiv => {
+            dataDiv.classList.add('oculto');
+        });
+
+        document.getElementById(e.target.getAttribute('data-target')).classList.remove('oculto');
+
+    }
+
 });
 
 document.addEventListener('click', e => {
