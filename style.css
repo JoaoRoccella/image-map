@@ -7,8 +7,15 @@
     scroll-behavior: smooth;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
 img {
-    width: 100%;
+    height: 100%;
 }
 
 .oculto {
@@ -34,13 +41,18 @@ area {
 }
 
 #parabrisa {
-    top: 50px;
+    top: 30%;
     left: 80px;
 }
 
 #retrovisor-dir {
-    top: 50%;
-    left: calc(50% - 100px);
+    top: 30%;
+    left: 80px;
+}
+
+#espelho-retrovisor {
+    top: 30%;
+    left: 80px;
 }
 
 .close {
