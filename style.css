@@ -41,18 +41,18 @@ area {
 }
 
 #parabrisa {
-    top: 30%;
-    left: 80px;
+    bottom: 30px;
+    left: 30px;
 }
 
 #retrovisor-dir {
-    top: 30%;
-    left: 80px;
+    bottom: 30px;
+    left: 30px;
 }
 
 #espelho-retrovisor {
-    top: 30%;
-    left: 80px;
+    bottom: 30px;
+    left: 30px;
 }
 
 .close {
