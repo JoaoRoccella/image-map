@@ -55,9 +55,9 @@ p {
     padding: 20px;
     border-radius: 12px;
     border: 2px solid #ccc;
-    box-shadow: 10px 10px 40px -10px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: 10px 10px 40px -10px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 10px 10px 40px -10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 10px 10px 40px -10px rgba(0, 0, 0, 0.5);
+    box-shadow: 10px 10px 40px -10px rgba(0, 0, 0, 0.5);
     z-index: 2;
     animation: aparecer .3s ease-out 1 forwards;
 }
