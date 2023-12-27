@@ -1,4 +1,4 @@
-// Ao carregar a página ou redimensionar, define o tamanho do overlay igual ao da imagem carregada
+// Ao carregar a página ou redimensionar, define o tamanho do overlay igual ao da imagem-base carregada
 ['load', 'resize'].forEach(event => {
 
     addEventListener(event, () => {
@@ -12,11 +12,7 @@ document.addEventListener('click', e => {
 
     if (e.target.localName === 'area') {
 
-        document.querySelectorAll('div.data').forEach(dataDiv => {
-            dataDiv.classList.add('oculto');
-        });
-        
-        document.querySelector('#overlay').classList.add('oculto');
+        ocultaElementosDetalhes();
 
         document.getElementById(e.target.getAttribute('data-target')).classList.remove('oculto');
 
@@ -27,25 +23,7 @@ document.addEventListener('click', e => {
     // caso contrário, ao clicar no X da div fecha o conteúdo
     } else if (e.target.classList.contains('close')) {
         
-        document.querySelectorAll('.sobreposicao').forEach(imagem => {
-            imagem.classList.add('oculto');
-        });
-
-        e.target.closest('div').classList.add('oculto');
-
-        document.querySelector('#overlay').classList.add('oculto');
-
-    } else if (e.target.classList.contains('sobreposicao')) {
-
-        document.querySelectorAll('.sobreposicao').forEach(imagem => {
-            imagem.classList.add('oculto');
-        });
-
-        document.querySelectorAll('.data').forEach(dataDiv => {
-            dataDiv.classList.add('oculto');
-        });
-
-        document.querySelector('#overlay').classList.add('oculto');
+        ocultaElementosDetalhes();
 
     }
 
@@ -56,24 +34,21 @@ document.addEventListener('keydown', e => {
 
     if (e.key === 'Escape') {
 
-        document.querySelectorAll('.sobreposicao').forEach(imagem => {
-            imagem.classList.add('oculto');
-        });
-
-        document.querySelectorAll('.data').forEach(dataDiv => {
-            dataDiv.classList.add('oculto');
-        });
-        
-        document.querySelector('#overlay').classList.add('oculto');
+        ocultaElementosDetalhes();
     }
 
 });
 
-// Fecha qualquer div de informação ao clicar no overlay
-document.querySelector('#overlay').addEventListener('click', e => {
-    e.target.classList.add('oculto');
+function ocultaElementosDetalhes() {
+
+    document.querySelectorAll('.sobreposicao').forEach(imagem => {
+        imagem.classList.add('oculto');
+    });
 
     document.querySelectorAll('.data').forEach(dataDiv => {
         dataDiv.classList.add('oculto');
     });
-});
+    
+    document.querySelector('#overlay').classList.add('oculto');
+
+}
