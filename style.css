@@ -146,3 +146,8 @@ footer p {
     margin: 0 0 5px 5px;
     text-align: center;
 }
+
+footer a {
+    text-decoration: none;
+    color: initial;
+}
