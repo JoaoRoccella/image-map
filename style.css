@@ -93,6 +93,14 @@ area {
     cursor: pointer;
 }
 
+span.html-tag::before {
+    content: "<";
+}
+
+span.html-tag::after {
+    content: ">";
+}
+
 @keyframes aparecer {
     from {
         margin-left: -50px;
