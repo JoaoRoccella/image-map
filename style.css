@@ -67,17 +67,17 @@ area {
 }
 
 #parabrisa {
-    bottom: 30px;
+    bottom: 50px;
     left: 30px;
 }
 
 #retrovisor-dir {
-    bottom: 30px;
+    bottom: 50px;
     left: 30px;
 }
 
 #espelho-retrovisor {
-    bottom: 30px;
+    bottom: 50px;
     left: 30px;
 }
 
@@ -150,4 +150,14 @@ footer p {
 footer a {
     text-decoration: none;
     color: initial;
+}
+
+span.caption {
+    position: absolute;
+    bottom: -30px;
+    color: #fff;
+    font-variant: petite-caps;
+    width: 100%;
+    text-align: center;
+    margin-left: -20px;
 }
