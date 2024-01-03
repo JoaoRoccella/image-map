@@ -43,7 +43,7 @@ p {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #0008;
+    background-color: rgba(0, 0, 0, 0.533);
     z-index: 1;
     width: 100%;
     animation: overlay .3s ease-out 1 forwards;
