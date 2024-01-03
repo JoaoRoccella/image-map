@@ -1,7 +1,6 @@
 {
   "devDependencies": {
-    "cypress": "^13.6.2",
-    "hint": "^7.1.10"
+    "cypress": "^13.6.2"
   },
   "scripts": {
     "webhint": "npx hint http://127.0.0.1:5500/",
