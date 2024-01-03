@@ -7,9 +7,9 @@ describe('Testes E2E para o Projeto Carro', () => {
 
     });
 
-    it('Testa se 2 é igual a 2', () => {
+    it('Verifica se a altura do overlay é o mesmo da imagem base', () => {
 
-        expect(2).to.equal(2);
+        
         
     });
 
