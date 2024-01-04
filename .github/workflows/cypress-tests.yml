@@ -1,0 +1,21 @@
+name: testes-cypress
+
+on:
+  push:
+    branches:
+      - tests
+
+job:
+  test:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
+        with:
+          start: npm start
+          wait-on: 'http://127.0.0.1:8080, http://localhost:8080'
+          wait-on-timeout: 120
