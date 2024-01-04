@@ -235,20 +235,20 @@ describe('Testes E2E para o Projeto Carro', () => {
 
         });
 
-        // it('Verifica se o espelho é clicável na viewport', () => {
+        it('Verifica se o espelho é clicável na viewport', () => {
 
 
-        //     cy.get('area[data-target="espelho-retrovisor"]').invoke('attr', 'coords').then(coords => {
+            cy.get('area[data-target="espelho-retrovisor"]').invoke('attr', 'coords').then(coords => {
 
-        //         const [x, y] = coords.split(',').map(coord => parseInt(coord.trim(), 10));
+                const [x, y] = coords.split(',').map(coord => parseInt(coord.trim(), 10));
 
-        //         expect(x).to.be.at.most(380);
+                expect(x).to.be.at.most(380);
 
-        //         expect(y).to.be.at.most(600);
+                expect(y).to.be.at.most(600);
 
-        //     });
+            });
 
-        // });
+        });
 
         it('Verifica se o parabrisa é clicável na viewport', () => {
 
@@ -266,6 +266,5 @@ describe('Testes E2E para o Projeto Carro', () => {
         });
 
     });
-
 
 });
