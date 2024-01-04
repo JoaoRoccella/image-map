@@ -1,4 +1,4 @@
-name: Testes Cypress
+name: testes-cypress
 
 on:
   push:
@@ -12,9 +12,6 @@ jobs:
     steps:
       - name: Checkout do código
         uses: actions/checkout@v4
-
-      # Install npm dependencies, cache them correctly
-      # and run all Cypress tests
 
       - name: Cypress run
         uses: cypress-io/github-action@v6
