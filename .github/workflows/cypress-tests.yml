@@ -5,7 +5,7 @@ on:
     branches:
       - tests
 
-job:
+jobs:
   test:
     runs-on: ubuntu-22.04
 
