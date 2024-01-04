@@ -2,7 +2,7 @@ describe('Testes E2E para o Projeto Carro', () => {
 
     beforeEach(() => {
 
-        cy.visit('http://127.0.0.1:5500/');
+        cy.visit('http://127.0.0.1:8080/');
 
     });
 
