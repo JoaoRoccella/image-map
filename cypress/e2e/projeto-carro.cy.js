@@ -6,7 +6,13 @@ describe('Testes E2E para o Projeto Carro', () => {
 
     });
 
-    context('Testes para Desktop', () => {
+    context('Testes para Desktop (padrão)', () => {
+
+        beforeEach(() => {
+            
+            cy.viewport(1000, 660);
+
+        });
 
         it('Verifica se a altura do overlay é o mesmo da imagem base', () => {
 
@@ -91,9 +97,9 @@ describe('Testes E2E para o Projeto Carro', () => {
             cy.get('[data-test="rodape"]').children('p').should('exist');
             cy.get('[data-test="rodape"]').children('p').children('a').should('exist');
 
-            cy.get('[data-test="repo"]').invoke('attr', 'href').then(link => {
+            cy.get('[data-test="repo"]').invoke('attr', 'href').then(href => {
 
-                cy.request(link).then(resposta => {
+                cy.request(href).then(resposta => {
 
                     expect(resposta.status).to.equal(200);
 
@@ -116,7 +122,7 @@ describe('Testes E2E para o Projeto Carro', () => {
 
     });
 
-    context('Testes para Mobile', () => {
+    context('Testes para Mobile (380 x 600)', () => {
 
         beforeEach(() => {
 
