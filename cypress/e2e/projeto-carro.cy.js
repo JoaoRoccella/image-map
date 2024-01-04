@@ -120,7 +120,7 @@ describe('Testes E2E para o Projeto Carro', () => {
 
         beforeEach(() => {
 
-            cy.viewport(480, 720);
+            cy.viewport(380, 620);
 
         });
 
@@ -236,9 +236,9 @@ describe('Testes E2E para o Projeto Carro', () => {
 
                 const [x, y] = coords.split(',').map(coord => parseInt(coord.trim(), 10));
 
-                expect(x).to.be.at.most(480);
-                
-                expect(y).to.be.at.most(720);
+                expect(x).to.be.at.most(380);
+
+                expect(y).to.be.at.most(620);
 
             });
 
