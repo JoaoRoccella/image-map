@@ -1,0 +1,24 @@
+name: Testes Cypress
+
+on:
+  push:
+    branches:
+      - tests
+
+jobs:
+  test:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      # Install npm dependencies, cache them correctly
+      # and run all Cypress tests
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
+        with:
+          start: npm start
+          wait-on: 'http://127.0.0.1:8080, http://localhost:8080'
+          wait-on-timeout: 120
