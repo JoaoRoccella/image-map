@@ -33,13 +33,19 @@ describe('Testes E2E para o Projeto Carro', () => {
 
     });
 
+    it('Verifica a quantidade minima de cada card de informação', () => {
+        
+        cy.get('[data-test="divCard"]').should('have.length.of.at.least', 3);
+        
+    });
+
     it('Verifica se os cards de informações estão ocultos', () => {
 
-        cy.get('[data-test="divRetrovisorDir"]').should('have.class', 'oculto').and('not.be.visible');
+        cy.get('[data-test="divCard"]').each(card => {
 
-        cy.get('[data-test="divParabrisa"]').should('have.class', 'oculto').and('not.be.visible');
+            cy.wrap(card).should('have.class', 'oculto').and('be.hidden');
 
-        cy.get('[data-test="divEspelhoRetrovisor"]').should('have.class', 'oculto').and('not.be.visible');
+        });
 
     });
 
@@ -61,42 +67,19 @@ describe('Testes E2E para o Projeto Carro', () => {
 
     });
 
-    it('Verifica a estruturado card Parabrisa', () => {
+    it('Verifica a estrutura do rodapé', () => {
+        cy.get('[data-test="rodape"]').should('exist', 'a', 'p');
 
-        cy.get('[data-test="imgSobreposicao"]').should('have.length.of.at.least', 3);
+        cy.get('[data-test="ancora"]').invoke('attr', 'href').then(link => {
 
-        cy.get('[data-test="divParabrisa"]').each(children => {
+            cy.request(link).then(resposta => {
 
-            cy.wrap(children).should('exist')
+                expect(resposta.status).to.equal(200);
 
-        });
-
-    });
-
-    it('Verifica a estruturado card Retrovisor Dir', () => {
-
-        cy.get('[data-test="imgSobreposicao"]').should('have.length.of.at.least', 3);
-
-        cy.get('[data-test="divRetrovisorDir"]').each(children => {
-
-            cy.wrap(children).should('exist')
+            });
 
         });
-
+        
     });
-
-    it('Verifica a estruturado do card Espelho Retrovisor', () => {
-
-        cy.get('[data-test="imgSobreposicao"]').should('have.length.of.at.least', 3);
-
-        cy.get('[data-test="divEspelhoRetrovisor"]').each(children => {
-
-            cy.wrap(children).should('exist')
-
-        });
-
-    });
-
-
 
 });
